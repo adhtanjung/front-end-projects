@@ -12,9 +12,15 @@ class TodoForm extends Component {
 
 	addTodo = (e) => {
 		e.preventDefault();
-		this.setState({
-			todos: [...this.state.todos, { text: this.state.input, complete: false }],
-		});
+		const { input } = this.state;
+		if (!/^\s*$/.test(input)) {
+			this.setState({
+				todos: [
+					...this.state.todos,
+					{ text: this.state.input, complete: false },
+				],
+			});
+		}
 		this.setState({ input: "" });
 	};
 	handleInput = (e) => {
