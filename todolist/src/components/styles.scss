@@ -1,0 +1,15 @@
+.todos{
+    background-color: black;
+    border-radius: 5px;
+    &:hover{
+        background-color: rgb(53, 53, 53);
+        transition: 200ms;
+        cursor: pointer;
+    }
+}
+.todo-card{
+    background: rgb(29, 29, 29);
+    width: 550px;
+    border-radius: 10px;
+    margin-top: 40px;
+}

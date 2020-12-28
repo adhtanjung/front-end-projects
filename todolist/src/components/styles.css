@@ -1,0 +1,19 @@
+.todos {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.todos:hover {
+  background-color: #353535;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.todo-card {
+  background: #1d1d1d;
+  width: 550px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+/*# sourceMappingURL=styles.css.map */
