@@ -107,6 +107,8 @@ class TodoForm extends Component {
 						onClick={() => this.handleCompleted(i)}
 						style={{
 							textDecoration: complete ? "line-through" : "",
+							backgroundColor: complete ? "#262626" : "black",
+							color: complete ? "#a8a8a8" : "white",
 							width: "400px",
 						}}
 						className="d-flex justify-content-center todos"
