@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "email": "adhtanjung@gmail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 1
+    },
+    {
+      "email": "adhtanjung@gmail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 2
+    },
+    {
+      "email": "adhitanjung@gmail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 3
+    },
+    {
+      "email": "marlo@mail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 4
+    },
+    {
+      "email": "asd@mail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 5
+    },
+    {
+      "email": "asdasdasd@mgail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 6
+    },
+    {
+      "email": "zxczxc@mail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 7
+    },
+    {
+      "email": "zzz@mail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 8
+    },
+    {
+      "email": "zxczxc@gmail.com",
+      "password": "Asd12345",
+      "confirm": "Asd12345",
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "malmsey",
+      "image": "http://www.pngall.com/wp-content/uploads/5/Barbecue-Hamburger-Transparent.png",
+      "category": 3,
+      "price": 69000
+    },
+    {
+      "id": 2,
+      "name": "jawhole",
+      "image": "http://www.pngall.com/wp-content/uploads/2016/05/Burger-Free-PNG-Image.png",
+      "category": 2,
+      "price": 39000
+    },
+    {
+      "id": 3,
+      "name": "onager",
+      "image": "http://www.pngall.com/wp-content/uploads/2016/05/Burger-PNG-Clipart.png",
+      "category": 1,
+      "price": 24900
+    },
+    {
+      "id": 4,
+      "name": "malmsey",
+      "image": "http://www.pngall.com/wp-content/uploads/5/Barbecue-Hamburger-Transparent.png",
+      "category": 3,
+      "price": 69000
+    },
+    {
+      "id": 5,
+      "name": "malmsey",
+      "image": "http://www.pngall.com/wp-content/uploads/5/Barbecue-Hamburger-Transparent.png",
+      "category": 3,
+      "price": 69000
+    },
+    {
+      "id": 6,
+      "name": "malmsey",
+      "image": "http://www.pngall.com/wp-content/uploads/5/Barbecue-Hamburger-Transparent.png",
+      "category": 3,
+      "price": 69000
+    }
+  ],
+  "categoryProducts": [
+    {
+      "all": 0
+    },
+    {
+      "smallburger": 1
+    },
+    {
+      "mediumburger": 2
+    },
+    {
+      "largeburger": 3
+    }
+  ],
+  "cart": []
+}
