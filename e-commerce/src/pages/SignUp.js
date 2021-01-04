@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { Input, Button } from "reactstrap";
-import { signupAction } from "../redux/actions";
+import { signupAction, fetchCartByUserIdAction } from "../redux/actions";
 
 let loginInfo = {
 	email: "",
@@ -10,52 +10,55 @@ let loginInfo = {
 	confirm: "",
 };
 
-const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 function SignUp(props) {
-	const [login, setLogin] = useState(loginInfo);
+	const [signUp, setsignUp] = useState(loginInfo);
 	const handleInput = (e) => {
-		setLogin({
-			...login,
+		setsignUp({
+			...signUp,
 			[e.target.id]: e.target.value,
 		});
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		props.signupAction(login);
+		props.signupAction(signUp);
 		// localStorage.setItem("id", props.id);
 	};
 	const emailCheck = useRef();
 
 	if (props.id !== 0) {
+		props.fetchCartByUserIdAction(props.id);
 		return <Redirect to="/" />;
 	}
 	return (
 		<div>
+			<h2>Join our community!</h2>
 			<form className="input-field" onSubmit={handleSubmit}>
+				<h6>Email</h6>
 				<Input
 					type="email"
 					id="email"
 					onChange={handleInput}
 					ref={emailCheck}
-					value={login.email}
+					value={signUp.email}
 					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
 					required
 				/>
-
+				<h6>Password</h6>
 				<Input
 					type="password"
 					id="password"
 					onChange={handleInput}
-					value={login.password}
+					value={signUp.password}
 					pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
 					required
 				/>
+				<h6>Confirm Password</h6>
 				<Input
 					type="password"
 					id="confirm"
 					onChange={handleInput}
-					value={login.confirm}
+					value={signUp.confirm}
 					required
 				/>
 				<Button>Sign Up</Button>
@@ -67,4 +70,7 @@ const mapStatetoProps = ({ user }) => {
 	return { id: user.id };
 };
 
-export default connect(mapStatetoProps, { signupAction })(SignUp);
+export default connect(mapStatetoProps, {
+	signupAction,
+	fetchCartByUserIdAction,
+})(SignUp);
