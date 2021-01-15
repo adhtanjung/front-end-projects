@@ -8,9 +8,7 @@ import {
 	DropdownItem,
 	DropdownMenu,
 	DropdownToggle,
-	NavbarToggler,
 	UncontrolledDropdown,
-	Collapse,
 } from "reactstrap";
 
 function Header(props) {
@@ -46,11 +44,13 @@ function Header(props) {
 
 					<UncontrolledDropdown inNavbar>
 						<DropdownToggle nav caret className="clickable">
-							{props.email}
+							{props.email.split("@")[0]}
 						</DropdownToggle>
 						<DropdownMenu right nav>
 							<DropdownItem>
-								Profile <RiAccountCircleLine />
+								<Link to="/profile">
+									Profile <RiAccountCircleLine />
+								</Link>
 							</DropdownItem>
 
 							<DropdownItem divider />

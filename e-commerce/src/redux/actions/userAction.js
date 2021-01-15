@@ -1,5 +1,7 @@
 import axios from "axios";
 import { api_url } from "../../helpers/api_url";
+import swal from "sweetalert";
+import { Redirect } from "react-router-dom";
 
 export const signupAction = (data) => {
 	return (dispatch) => {
@@ -53,6 +55,38 @@ export const keepLoginAction = (id) => {
 					type: "LOGIN",
 					payload: res.data,
 				});
+			})
+			.catch((err) => {});
+	};
+};
+export const changeUserEmailAction = (email, id) => {
+	return (dispatch) => {
+		axios
+			.get(`${api_url}/users?email=${email}`)
+			.then((res) => {
+				if (res.data.length > 0) {
+					swal({
+						title: "oops email has already taken",
+						icon: "warning",
+					});
+				} else {
+					axios
+						.patch(`${api_url}/users/${id}`, { email: email })
+						.then((res) => {
+							dispatch({
+								type: "LOGIN",
+								payload: res.data,
+							});
+							swal({
+								title: "Email has changed.",
+								icon: "success",
+							});
+							window.location.href = "/";
+						})
+						.catch((err) => {
+							console.log(err);
+						});
+				}
 			})
 			.catch((err) => {});
 	};

@@ -1,0 +1,27 @@
+.container-header{
+    color:#212121;
+    .logo{
+        text-decoration: none;
+        color:#212121;
+        &:hover{
+            color: #535353;
+            transition: 250ms;
+        }
+    }
+    .header-left{
+        width: 70%;
+    }
+    .header-right{
+        width: 18%;
+    }
+
+}
+.main-container{
+  height: 80vh;
+    .body-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}

@@ -1,0 +1,35 @@
+.container-header {
+  color: #212121;
+}
+
+.container-header .logo {
+  text-decoration: none;
+  color: #212121;
+}
+
+.container-header .logo:hover {
+  color: #535353;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.container-header .header-left {
+  width: 70%;
+}
+
+.container-header .header-right {
+  width: 18%;
+}
+
+.main-container {
+  height: 80vh;
+}
+
+.main-container .body-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=App.css.map */
